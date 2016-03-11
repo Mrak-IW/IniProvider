@@ -9,6 +9,7 @@ void main()
 {
 	setlocale(LC_ALL, "russian");
 	ifstream iniFile(iniName);
+	cout << "Тестирование чтения из INI-файла" << endl;
 	if (iniFile.is_open())
 	{
 		IniProvider ini(iniFile);
