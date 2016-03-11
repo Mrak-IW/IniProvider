@@ -3,14 +3,15 @@
 #include <map>
 using namespace std;
 
-class IniProvider
+class IniProvider : public map<string, string>
 {
-public:
-	map<string, string> properties;
+private:
 	istream *iniFile;
-
+public:
 	IniProvider(istream &iniFile);
-	void LoadData();
 	~IniProvider();
+
+	void LoadData();
+	bool ContainsKey(string key);
 };
 
