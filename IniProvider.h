@@ -12,18 +12,20 @@ private:
 	/// Указатель на поток ввода, из которого будут считаны настройки
 	istream *iniFile;
 public:
-	/// \brief Создать объект настроек на основании
-	/// \param iniFile	istream & - поток ввода. Передаётся по ссылке.
+	// Да, XML-комменты от VisualStudio DoxyGen тоже жрёт
+	/// <summary> Создать объект настроек на основании </summary>
+	/// <param name="iniFile"> Поток ввода. Передаётся по ссылке. </param>
 	IniProvider(istream &iniFile);
 	~IniProvider();
 
 	/// Подгрузить настройки из файла
 	void LoadData();
 
-	/// \brief Проверить наличие конкретной настройки в файле
-	/// \param key	string - имя настройки
-	///
-	/// \return bool - TRUE, если настройка в файле есть
+	/// <summary>
+	/// Проверить наличие конкретной настройки в файле
+	/// </summary>
+	/// <param name="key">Имя настройки</param>
+	/// <returns>TRUE, если настройка в файле есть</returns>
 	bool ContainsKey(string key);
 };
 
