@@ -13,8 +13,8 @@ private:
 	istream *iniFile;
 public:
 	// Да, XML-комменты от VisualStudio DoxyGen тоже жрёт
-	/// <summary> Создать объект настроек на основании </summary>
-	/// <param name="iniFile"> Поток ввода. Передаётся по ссылке. </param>
+	/// <summary> Создать объект настроек на основании файла настроек </summary>
+	/// <param name="iniFile"> Поток ввода - файл настроек. Передаётся по ссылке. </param>
 	IniProvider(istream &iniFile);
 	~IniProvider();
 
