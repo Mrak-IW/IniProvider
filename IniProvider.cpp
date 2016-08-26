@@ -24,6 +24,8 @@ void IniProvider::LoadData()
 	istream &file = *iniFile;
 	int i;
 
+	this->clear();
+
 	while (!file.eof())
 	{
 		getline(file, buf);
